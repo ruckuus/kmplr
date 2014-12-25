@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "links#index"
   devise_for :users
+  get "links/mine", to: "links#mine"
   resources :links do
     member do
       put "like", to: "links#upvote"
