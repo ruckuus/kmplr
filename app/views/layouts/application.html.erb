@@ -23,7 +23,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Links <span class="sr-only">(current)</span></a></li>
+        <li class="active"><%= link_to 'Links', root_url %> <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -48,11 +48,13 @@
 </nav>
 </head>
 <body>
+  <div id="main_content" class="container">
     <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert alert-info") %>
     <% end %>
   <div id="content" class="col-md-8 center-block">
     <%= yield %>
+  </div>
   </div>
 
 </body>
