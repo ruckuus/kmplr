@@ -28,6 +28,7 @@ class LinksController < ApplicationController
 
   def mine
     @links = current_user.links
+    @user = current_user
   end
 
   # GET /links/new

@@ -1,3 +1,9 @@
+<%=
+  if !@user.avatar.url.nil?
+      image_tag @user.avatar.url(:thumb), class:"img-circle"
+    end 
+%>
+
 <div class="link row clearfix">
     <% @links.each do |link| %>
          <h2> <%= link_to link.title, link %></h2>
