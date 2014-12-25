@@ -24,6 +24,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to 'Links', root_url %> <span class="sr-only">(current)</span></a></li>
+        <li><%= link_to 'Submit links', new_link_path %> <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -31,6 +32,7 @@
           <ul class="dropdown-menu" role="menu">
 <% if user_signed_in? -%>
             <li><%= link_to 'Submit Link', new_link_path %> </li>
+            <li><%= link_to 'My Links', new_link_path %> </li>
             <li><%= link_to 'Account', edit_user_registration_path %> </li>
             <li class="divider"></li>
             <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %> </li>
@@ -52,7 +54,7 @@
     <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert alert-info") %>
     <% end %>
-  <div id="content" class="col-md-8 center-block">
+  <div id="content">
     <%= yield %>
   </div>
   </div>

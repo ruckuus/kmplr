@@ -14,6 +14,10 @@ class LinksController < ApplicationController
   def show
   end
 
+  def mine
+    @link = current_user.links
+  end
+
   # GET /links/new
   def new
     @link = current_user.links.build
