@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>KUMPULIN</title>
+  <title>KMPLR - Dump your link here</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -24,11 +24,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to 'Submit links', new_link_path %> <span class="sr-only">(current)</span></a></li>
+        <li id="subkmplr"><%= link_to 'SUBMIT', new_link_path %> </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="menukmplr">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
 <% if user_signed_in? -%>
             <li><%= link_to 'Submit Link', new_link_path %> </li>
