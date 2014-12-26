@@ -1,20 +1,22 @@
  <div class="link row clearfix">
     <% @links.each do |link| %>
-         <h2> <%= link_to link.title, link %></h2>
-         <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small> <br>
-    <div class="btn-group">
-      <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit</a>
-      <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-        <span class="glyphicon glyphicon-chevron-up"></span>
-        Upvote
-        <%= link.get_upvotes.size %>
-      <% end %>
-      <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-        <span class="glyphicon glyphicon-chevron-down">
-        Downvote
-        <%= link.get_downvotes.size %>
-      <% end %>
-    </div>
+        <div class="row">
+           <div class="col-xs-2 col-sm-1 col-md-1">
+             <br>
+             <div class="btn-group-vertical">
+               <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+                 <span class="glyphicon glyphicon-chevron-up"></span>&nbsp;<%= link.get_upvotes.size %>
+               <% end %>
+               <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+                 <span class="glyphicon glyphicon-chevron-down">&nbsp;<%= link.get_downvotes.size %>
+               <% end %>
+               </div>
+           </div>
+           <div class="col-xs-10 col-sm-11 col-md-11">
+             <h3> <%= link_to link.title, link %></h3>
+             <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small> <br>
+           </div>
+         </div>
     <% end %>
 </div>
 <br>
