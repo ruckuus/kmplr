@@ -18,6 +18,7 @@
   <div class="form-group">
       <%= f.label :url %> :
       <%= f.text_field :url, :required => true, :placeholder => "The URL you want to submit", :class => "form-control" %>
+      <small>Include URL scheme like 'http' or 'https'</small>
   </div>
   <div class="actions form-group">
     <%= f.submit "Submit", class: "btn btn-primary" %>
