@@ -29,6 +29,7 @@ gem 'acts_as_votable', '0.10.0'
 gem 'paperclip', '~> 4.2'
 gem 'rails_12factor', group: :production
 gem 'aws-sdk'
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

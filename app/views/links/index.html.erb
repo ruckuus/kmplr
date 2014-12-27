@@ -14,7 +14,8 @@
            </div>
            <div class="col-xs-10 col-sm-11 col-md-11">
              <h3> <%= link_to link.title, link %></h3>
-             <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small> <br>
+             <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
+             | <small class="author"><%= link.comments.count %> <%= link_to "comments", link %></small> <br>
            </div>
          </div>
     <% end %>
