@@ -1,0 +1,38 @@
+/* Yeti
+ * Bootswatch
+ *= require_self
+ *= require yeti/loader
+ *= require yeti/bootswatch
+*/
+#logo {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #e74c3c;
+  a {
+    color: #2F363E;
+  }
+}
+
+#subkmplr {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #16a085;
+  a {
+    color: #16a085;
+  }
+}
+
+#menukmplr {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #2980b9;
+  a {
+    color: #2980b9;
+  }
+}

@@ -32,6 +32,11 @@ gem 'aws-sdk'
 gem 'simple_form'
 gem 'public_suffix'
 
+# Bootswatch themes
+gem 'twitter-bootswatch-rails', '~> 3.2.0'
+gem 'twitter-bootswatch-rails-helpers'
+gem 'therubyracer'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
