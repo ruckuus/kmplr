@@ -47,6 +47,8 @@
 <% if user_signed_in? -%>
             <li><%= link_to 'Submit Link', new_link_path %> </li>
             <li><%= link_to 'My Links', links_mine_path %> </li>
+            <li><%= link_to 'Profile', controller: "profiles", action: "show", id: current_user.profile.id %> </li>
+            <li class="divider"></li>
             <li><%= link_to 'Account', edit_user_registration_path %> </li>
             <li class="divider"></li>
             <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %> </li>
