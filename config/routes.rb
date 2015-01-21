@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :comments
 
-  root "links#index"
+  root "arts#index"
   devise_for :users
   get "links/mine", to: "links#mine"
   get "users/profile/:id", to: "users#user_profile"

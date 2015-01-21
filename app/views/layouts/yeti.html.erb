@@ -37,7 +37,7 @@
           </button>
 
           <a class="navbar-brand" id="logo" href="<%= root_url %>"><span>KMPLR</span></a>
-          <a class="navbar-brand" id="subkmplr" href="<%= new_link_path %>"><span>SUBMIT</span></a>
+          <a class="navbar-brand" id="subkmplr" href="<%= new_art_path %>"><span>SUBMIT</span></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -46,6 +46,7 @@
           <ul class="dropdown-menu" role="menu">
 <% if user_signed_in? -%>
             <li><%= link_to 'Submit Link', new_link_path %> </li>
+            <li><%= link_to 'Submit Artwork', new_art_path %> </li>
             <li><%= link_to 'My Links', links_mine_path %> </li>
             <% if current_user.profile.nil? %>
             <li><%= link_to 'New Profile', new_profile_path %> </li>
