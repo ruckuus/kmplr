@@ -1,6 +1,7 @@
 class ArtsController < ApplicationController
   before_action :set_art, only: [:show, :edit, :update, :destroy]
   before_action :authorized_user, only: [:edit, :update, :destroy]
+  before_filter :authenticate_user!, :except => [:index, :show]
 
   respond_to :html
 
