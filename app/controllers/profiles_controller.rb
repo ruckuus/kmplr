@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, :except => [:index, :show]
 
   respond_to :html
 
@@ -34,8 +35,13 @@ class ProfilesController < ApplicationController
   end
 
   def destroy
-    @profile.destroy
-    respond_with(@profile)
+    # @profile.destroy
+    # respond_with(@profile)
+    redirect_to profiles_path, notice: "Not authorized to edit this profile" 
+  end
+
+  def authorized_user
+    redirect_to profiles_path, notice: "Not authorized to edit this profile" if @profile.nil?
   end
 
   private

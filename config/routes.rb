@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   devise_for :users
   get "links/mine", to: "links#mine"
   get "users/profile/:id", to: "users#user_profile"
+  get "artists", to: "profiles#index"
   resources :links do
     member do
       put "like", to: "links#upvote"
