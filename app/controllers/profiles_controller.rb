@@ -9,6 +9,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @artwork = @profile.user.art
     respond_with(@profile)
   end
 
