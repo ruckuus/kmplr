@@ -7,6 +7,7 @@ class ArtsController < ApplicationController
 
   def index
     @arts = Art.all
+    @latests = Art.order('updated_at DESC')
     respond_with(@arts)
   end
 

@@ -1,16 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Discover New Arts</h1>
-
-<table>
-  <tbody>
+<p>
+<div class="row clearfix">
+    <!-- Put the curated arts here -->
     <% @arts.each do |art| %>
-      <tr>
-        <%= image_tag art.artwork.url(:medium) %>
-      </tr>
+        
+      <div class="col-sm-6 col-md-3">
+         <div class="thumbnail">
+            <%= link_to (image_tag art.artwork.url(:medium)), art  %>
+         </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+</div>
 
-<br>
+<h2>Latest Submission</h2>
+<div class="row clearfix">
+    <% @latests.each do |latest| %>
+        
+      <div class="col-md-1">
+         <div class="span">
+            <%= link_to (image_tag latest.artwork.url(:thumb)), latest  %>
+         </div>
+      </div>
+    <% end %>
+
+</div>
 

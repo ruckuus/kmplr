@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @art.title %>
-</p>
+<div class="row clearfix">
+      <div class="col-md-4">
+         <div class="span3">
+            <%= image_tag @art.artwork.url(:medium) %>
+         </div>
+      </div> 
+      <div class="col-md-8">
+         <div class="span3">
+           <p>
+           Artwork Title: <%= @art.title %>
+           </p>
+          
+           <p>
+           Artist: <%= @art.user.name  %>
+           </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @art.description %>
-</p>
+           <p>
+           <%= @art.description  %>
+           </p>
+         </div>
+      </div> 
 
-<p>
-  <strong>Image:</strong>
-  <%= @art.image %>
-</p>
-
-<%= link_to 'Edit', edit_art_path(@art) %> |
-<%= link_to 'Back', arts_path %>
+</div>
