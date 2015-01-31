@@ -13,6 +13,7 @@ class ArtsController < ApplicationController
   end
 
   def show
+    @other_works = @art.user.art
     respond_with(@art)
   end
 
