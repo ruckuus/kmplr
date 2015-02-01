@@ -83,6 +83,33 @@
     <%= javascript_include_tag "yeti" %>
     <%= yield(:page_javascript) if content_for?(:page_javascript) %>
   </body>
+  <hr>
+<% if current_page?('/') -%>
+<div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>About ArtScout</h2>
+          <p>ArtScout is the new way to discover new arts, new artists. It is a platform for emerging artists to showcase their work, and a place for art seeker, professional galleries to scout new talents. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>T & C</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Getting Discovered</h2>
+          <p>Getting discovered by registering and submitting your work today.</p>
+
+<% if user_signed_in? -%>
+          <p><a class="btn btn-default" href="<%= new_art_path %>" role="button">Submit Artwork &raquo;</a></p>
+<% else -%>
+          <p><a class="btn btn-default" href="<%= new_user_registration_path %>" role="button">Register &raquo;</a></p>
+<% end -%>
+        </div>
+      </div>
+ <% end -%>
 <div id="footer" class="container">
   <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="navbar-inner navbar-content-center">
