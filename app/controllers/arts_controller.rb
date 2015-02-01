@@ -6,9 +6,9 @@ class ArtsController < ApplicationController
   respond_to :html
 
   def index
-    @arts = Art.all
+    @arts = Art.take(20) # random 20 artwork
     @latests = Art.order('updated_at DESC')
-    @artists = Profile.all
+    @artists = Profile.take(20) # random 20 artist
     respond_with(@arts)
   end
 
